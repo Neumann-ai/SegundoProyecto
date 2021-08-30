@@ -78,8 +78,6 @@ function userRegister()
 //Login
 
 //Dark theme
-const switchTheme = document.getElementById('switchTheme');
-
 function switchColor()
 {
     document.body.classList.toggle("dark");
