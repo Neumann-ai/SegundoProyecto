@@ -1,0 +1,14 @@
+body
+{
+    transition:1s ease all;
+    background-color: grey;
+    color: black;
+}
+
+
+body.dark
+{
+    transition:1s ease all;
+    background-color: black;
+    color: aqua;
+}
