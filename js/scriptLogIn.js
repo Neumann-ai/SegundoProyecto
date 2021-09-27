@@ -66,8 +66,16 @@ function LogIn()
     //Loguea o no segun el resultado anterior
     if(currentUser)
     {
-        console.log("Login Succesfully");
-        document.location="mainred.html";
+        if(currentUser.isActive)
+        {
+            console.log("Login Succesfully");
+            localStorage.setItem('usuarioLog', JSON.stringify(currentUser));
+            document.location="mainred.html";
+        }
+        else
+        {
+           alert("!Atencion¡ este usuario se encuentra momentaneamente blockeado") 
+        }
     }
     else
     {
@@ -179,8 +187,13 @@ function validateMail(mail)
 {
     const valid = usuarios.find(usuario => usuario.mail == mail)
 
+
     return valid;
 }
+
+
+
+
 
 //Login
 
